@@ -1,30 +1,49 @@
-import _ from 'lodash';
-const path = require('path-browserify');
-import './style.css';
+import loadHomePage from './js/home.js';
+import loadMenuPage from './js/menu.js';
+import loadContactPage from './js/contact.js';
+import './css/style.css';
 
-class Component {
-    constructor(innerHTML) {
-        const element = document.createElement('div');
-        element.innerHTML = innerHTML;
-
-        return element;
-    }
+function clearContent() {
+    const mainContent = document.querySelector('#content');
+    mainContent.innerHTML = '';
 }
 
-document.body.appendChild(new Component(
-    _.join(['Hello', 'webpack'], ' ')
-));
+function setupTabs() {
+    const siteWrapper = document.getElementById('site-wrapper');
+    const mainContent = document.querySelector('#content');
+    const navMenu = document.createElement('div');
+    const homeButton = document.createElement('button');
+    const menuButton = document.createElement('button');
+    const contactButton = document.createElement('button');
 
-document.body.appendChild(new Component(
-    window.location
-));
+    homeButton.textContent = 'Home';
+    menuButton.textContent = 'Menu';
+    contactButton.textContent = 'Contact';
 
-document.body.appendChild(new Component(
-    'log'
-));
+    navMenu.classList.add('nav-menu');
 
-document.body.appendChild(new Component(
-    "J'ai preseque fini pour ce soir et aujourd'hui. Je n'ai peut être pas fait grand chose, mais comme souvent cela m'a permit d'ouvrir les champs des possibles!"
-));
+    homeButton.onclick = () => {
+        clearContent();
+        loadHomePage();
+    };
+    menuButton.onclick = () => {
+        clearContent();
+        loadMenuPage();
+    };
+    contactButton.onclick = () => {
+        clearContent();
+        loadContactPage();
+    };
+
+    navMenu.appendChild(homeButton);
+    navMenu.appendChild(menuButton);
+    navMenu.appendChild(contactButton);
+
+    siteWrapper.insertBefore(navMenu, mainContent);
+}
 
 
+window.onload = () => {
+    setupTabs();
+    loadHomePage();
+}

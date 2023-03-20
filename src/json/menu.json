@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Classic Croque Monsieur",
+    "ingredients": ["Sourdough bread", "Gruyère cheese", "béchamel sauce", "Dijon mustard", "Black Forest ham"],
+    "description": "Savor the timeless flavors of our Classic Croque Monsieur, featuring premium Black Forest ham, melted Gruyère cheese, and a generous layer of creamy béchamel sauce, all nestled between two slices of crispy, golden sourdough bread.",
+    "price": "10.99"
+  },
+  {
+    "name": "Croque Madame",
+    "ingredients": ["Sourdough bread", "Gruyère cheese", "béchamel sauce", "Dijon mustard", "Black Forest ham", "fried egg"],
+    "description": "Elevate your croque monsieur experience with our delightful Croque Madame, which adds a perfectly fried egg on top of the classic combination of Black Forest ham, melted Gruyère cheese, and rich béchamel sauce, served on toasted sourdough bread.",
+    "price": "11.99"
+  },
+  {
+    "name": "Croque Provencal",
+    "ingredients": ["Sourdough bread", "Gruyère cheese", "béchamel sauce", "Dijon mustard", "Black Forest ham", "tomatoes", "fresh basil"],
+    "description": "Escape to the French countryside with our Croque Provencal, a refreshing twist on the classic croque monsieur. Enjoy the vibrant flavors of ripe tomatoes and fresh basil, complementing the traditional Black Forest ham, Gruyère cheese, and béchamel sauce.",
+    "price": "10.49"
+  },
+  {
+    "name": "Croque Auvergnat",
+    "ingredients": ["Sourdough bread", "blue cheese", "béchamel sauce", "Dijon mustard", "smoked turkey", "caramelized onions"],
+    "description": "Indulge in the bold taste of our Croque Auvergnat, which swaps traditional Gruyère for tangy blue cheese and combines it with smoked turkey and sweet caramelized onions, all smothered in béchamel sauce and served on toasted sourdough bread.",
+    "price": "13.99"
+  },
+  {
+    "name": "Croque Forestier",
+    "ingredients": ["Sourdough bread", "Gruyère cheese", "béchamel sauce", "Dijon mustard", "sautéed mushrooms", "spinach", "garlic"],
+    "description": "For a vegetarian-friendly option, try our Croque Forestier, a delectable medley of sautéed mushrooms, spinach, and garlic, topped with melted Gruyère cheese and creamy béchamel sauce, served on golden toasted sourdough bread.",
+    "price": "11.49"
+  },
+  {
+    "name": "Croque Saumon",
+    "ingredients": ["Sourdough bread", "Gruyère cheese", "béchamel sauce", "Dijon mustard", "smoked salmon", "capers", "dill"],
+    "description": "Experience the taste of the sea with our Croque Saumon, a delightful combination of smoked salmon, tangy capers, and fresh dill, accompanied by melted Gruyère cheese and rich béchamel sauce, all served on crispy, toasted sourdough bread.",
+    "price": "10.99"
+  },
+  {
+    "name": "Croque Hawaiian",
+    "ingredients": ["Sourdough bread", "Gruyère cheese", "béchamel sauce", "Dijon mustard", "Black Forest ham", "pineapple", "chives"],
+    "description": "Add a touch of the tropics to your meal with our Croque Hawaiian, featuring juicy pineapple and savory Black Forest ham, topped with melted Gruyère cheese and creamy béchamel sauce, garnished with chives and served on toasted sourdough bread.",
+    "price": "11.49"
+  },
+  {
+    "name": "Croque Chèvre",
+    "ingredients": ["Sourdough bread", "goat cheese", "béchamel sauce", "Dijon mustard", "prosciutto", "arugula", "honey"],
+    "description": "Satisfy your taste buds with our Croque Chèvre, a delightful combination of creamy goat cheese, salty prosciutto, and peppery arugula, drizzled with a touch of honey and topped with béchamel sauce, served on golden toasted sourdough bread.",
+    "price": "11.99"
+  },
+  {
+    "name": "Croque Truffé",
+    "ingredients": ["Sourdough bread", "Gruyère cheese", "truffle béchamel sauce", "Dijon mustard", "roast beef", "caramelized onions", "chives"],
+    "description": "Indulge in the luxurious flavors of our Croque Truffé, featuring tender roast beef and sweet caramelized onions, smothered in a rich, truffle-infused béchamel sauce and melted Gruyère cheese, garnished with chives and served on crispy sourdough bread.",
+    "price": "11.49"
+  },
+  {
+    "name": "Croque Vegano",
+    "ingredients": ["Sourdough bread", "vegan cheese", "cashew béchamel sauce", "Dijon mustard", "grilled eggplant", "roasted red peppers", "fresh basil"],
+    "description": "Catering to our plant-based friends, our Croque Vegano offers a delicious combination of grilled eggplant, roasted red peppers, and fresh basil, topped with melted vegan cheese and a creamy cashew béchamel sauce, served on toasted sourdough bread.",
+    "price": "11.99"
+  }
+]
