@@ -46,6 +46,7 @@ dd {
 ul[role='list'],
 ol[role='list'] {
   list-style: none;
+  padding: 0;
 }
 
 /* Set core root defaults */
@@ -97,6 +98,16 @@ select {
 }
 
 /* CUSTOM PROPERTIES */
+:root {
+
+    --primary-clr: chocolate;
+    --secondary-clr: #000;
+    --secondary-clr-attenuated: #f0f0f0;
+    --background-color: #1A1E2f;
+    --error-clr: #FB3E3E;
+
+    --br: 0px;
+}
 
 /* SITE LAYOUT & GLOBAL STYLES */
 body {
@@ -105,15 +116,28 @@ body {
 }
 
 #site-wrapper {
-    max-width: 800px;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 600px 1fr;
+}
+
+.nav-menu {
+    grid-column: 2 / 3;
 }
 
 #content {
+    display: grid;
+    grid-template-columns: 1fr 600px 1fr;
     margin-top: 2rem;
+    grid-column: 1 / -1;
+}
+
+h1 {
+    line-height: 1.2;
+    margin-bottom: 1rem;
 }
 
 /* PAGE */
+/* NAV MENU */
 .nav-menu {
     margin-top: 2rem;
     display: flex;
@@ -134,8 +158,152 @@ body {
     color: chocolate;
 }
 
+/* HOME PAGE */
+#content.home-page h1 {
+    grid-column: 2 / 3;
+}
+
+#content.home-page pre {
+    grid-column: 1 / -1;
+    margin: 0 auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+#content.home-page .page-content {
+    grid-column: 2 / 3;
+}
+
+#content.home-page .page-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.page-content p {
+    grid-column: 1 / 2;
+    font-size: 1.1rem;
+}
+.page-content div {
+    grid-column: 2 / 3;
+}
+
+
+/* MENU PAGE */
+#content.menu-page h1 {
+    grid-column: 2 / 3;
+}
+
+#content.menu-page .menu {
+    grid-column: 1 / -1;
+} 
+
+#content.menu-page .menu-item {
+    position: relative;
+    border-bottom: 1px solid #f0f0f0;
+    display: grid;
+    grid-template-columns: 1fr 600px 1fr;
+}
+
+.menu-item.open {
+    background-color: #f0f0f0; /* Slightly grey background */
+}
+
 .item-name-price {
+    position: relative;
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: space-between;
     cursor: pointer;
+    padding: .4rem 0;
+    font-weight: 400;
+}
+
+.menu-item.open .item-name-price {
+    font-weight: 700;
+}
+
+.item-name-price::before {
+    position: absolute;
+    left: -1.3rem;
+    top: 4px;
+    content: "\25B6"; /* Unicode value for ▶ */
+    cursor: pointer;
+}
+
+.menu-item.open .item-name-price::before {
+    content: "\25BC"; /* Unicode value for ▼ */
+}
+
+/* CONTACT PAGE */
+#content.contact-page h1, p, h3, ul, div, form {
+    grid-column: 2 / 3;
+}
+
+/* FORM */
+.form-cell {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.form-cell input[type="text"], 
+.form-cell input[type="email"],
+.form-cell input[type="tel"], 
+.form-cell textarea, 
+.form-cell select {
+    border: none;
+    background-color: var(--secondary-clr-attenuated);
+    color: var(--secondary-clr);
+    padding: 14px 24px;
+    border-radius: var(--br);
+}
+
+.form-cell select {
+    height: 58px;
+}
+
+.form-cell input[type="text"]:focus,
+.form-cell input[type="email"]:focus,
+.form-cell input[type="tel"]:focus,
+.form-cell textarea:focus,
+.form-cell select:focus {
+    outline: 2px solid var(--secondary-clr);
+}
+
+.form-cell input[type="text"]::placeholder,
+.form-cell input[type="email"]::placeholder,
+.form-cell input[type="tel"]::placeholder,
+.form-cell textarea::placeholder,
+.form-cell select::placeholder {
+    color: var(--body-clr-placeholders);
+}
+
+
+.form-cell label {
+    line-height: 1;
+    padding-left: var(--br);
+}
+
+form button[type="submit"] {
+    background: var(--primary-clr);
+    border: none;
+    border-radius: var(--br);
+    color: white;
+    font-weight: 700;
+    padding: 14px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+form button[type="submit"]:hover,
+form button[type="submit"]:focus {
+    background-color: chocolate;
 }
 
 /* MEDIA QUERIES */

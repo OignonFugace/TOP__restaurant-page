@@ -6,7 +6,17 @@ function createMenuItem(item) {
 
     const itemNamePrice = document.createElement('div');
     itemNamePrice.className = 'item-name-price';
-    itemNamePrice.textContent = `${item.name} - $${item.price}`;
+
+    // Create div for the item name
+    const itemName = document.createElement('div');
+    itemName.textContent = item.name;
+    itemNamePrice.appendChild(itemName);
+
+    // Create div for the item price
+    const itemPrice = document.createElement('div');
+    itemPrice.textContent = `$${item.price}`;
+    itemNamePrice.appendChild(itemPrice);
+
     menuItem.appendChild(itemNamePrice);
 
     const itemDetails = document.createElement('div');
@@ -31,13 +41,24 @@ function createMenuItem(item) {
 
     itemNamePrice.addEventListener('click', () => {
         itemDetails.style.display = itemDetails.style.display === 'none' ? 'block' : 'none';
+        menuItem.classList.toggle('open');
     });
 
     return menuItem;
 }
 
-export default async function loadMenuPage() {
+export default function loadMenuPage() {
     const mainContent = document.querySelector('#content');
+    mainContent.className = 'menu-page';
+
+    // Menu Page Title
+    const menuPageTitle = document.createElement('h1');
+    menuPageTitle.textContent = 'Our Delicious Croque-Monsieur Variations:';
+
+
+    // Menu Page Content
+    mainContent.appendChild(menuPageTitle);
+
     const menu = document.createElement('div');
     menu.className = 'menu';
 

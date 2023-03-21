@@ -40,6 +40,7 @@ function createContactForm() {
     messageLabel.textContent = 'Message:';
     const messageInput = document.createElement('textarea');
     messageInput.name = 'message';
+    messageInput.setAttribute('rows', '11');
     messageCell.appendChild(messageLabel);
     messageCell.appendChild(messageInput);
     messageRow.appendChild(messageCell);
@@ -71,8 +72,16 @@ function createContactForm() {
 
 export default function loadContactPage() {
     const mainContent = document.querySelector('#content');
-    const contactForm = createContactForm();
+    mainContent.className = 'contact-page';
     mainContent.innerHTML = ''; // Clear the mainContent before appending new elements
+
+    // Contact Page Title
+    const contactPageTitle = document.createElement('h1');
+    contactPageTitle.textContent = 'Get in Touch';
+    mainContent.appendChild(contactPageTitle);
+
+    // Contact Page Form
+    const contactForm = createContactForm();
     mainContent.appendChild(contactForm);
 }
 
